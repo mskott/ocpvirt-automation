@@ -5,7 +5,7 @@
     kubevirt.core.kubevirt_vm:
       state: present
       name: testvm
-      namespace: kubevirt-ansible
+      namespace: vmexamples
       labels:
         app: test
       instancetype:
