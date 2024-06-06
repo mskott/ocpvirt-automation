@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Delete VM
+    kubevirt.core.kubevirt_vm:
+      name: testvm
+      namespace: vmexamples
+      state: absent
+      wait: yes
