@@ -1,0 +1,15 @@
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleProject
+metadata:
+  name: ocpvirt-automation-git
+  namespace: aap
+spec:
+  repo: https://github.com/mskott/ocpvirt-automation.git
+  branch: main
+  name: OCPvirt-Automation
+  scm_type: git
+  organization: Default
+  description: "Automation of Openshift Virtualization"
+  connection_secret: controller-access
+  runner_pull_policy: IfNotPresent
