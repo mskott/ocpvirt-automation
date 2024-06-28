@@ -3,7 +3,7 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleProject
 metadata:
   name: ocpvirt-automation-git
-  namespace: aap
+  namespace: vmexamples
 spec:
   repo: https://github.com/mskott/ocpvirt-automation.git
   branch: main

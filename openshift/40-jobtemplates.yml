@@ -3,7 +3,7 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: JobTemplate
 metadata:
   name: createvm
-  namespace: aap
+  namespace: vmexamples
 spec:
   connection_secret: controller-access
   job_template_name: Create VM
@@ -15,7 +15,7 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: JobTemplate
 metadata:
   name: deletevm
-  namespace: aap
+  namespace: vmexamples
 spec:
   connection_secret: controller-access
   job_template_name: Delete VM

@@ -9,12 +9,12 @@ Atm. it doesn't install the operator so you will have to do this manully.
 
 The resources needs to be created in a particular order, ie. the Ansible Controller project must be created before the Job Templates can be created.
 
-| Filename                            |                                                                                                                                  |
-|:------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------|
-| 10-automation-controller.yml        | Deploys an Ansible Automation Controller in the namespace `aap`                                                                  |
-| 20-controller-connection-secret.yml | Creates a secret with a token to connect to the Automation Controller.<br>Token and controller URL must be added before running. |
-| 30-aap-project.yml                  | Creates a project pointing to this repo                                                                                          |
-| 40-job-templates.yml                | Creates job templates for the playbooks in `ansible/`                                                                            |
+| Filename                            | Namespace  |                                                                                                                                  |
+|:------------------------------------|------------|:---------------------------------------------------------------------------------------------------------------------------------|
+| 10-automation-controller.yml        | aap        | Deploys an Ansible Automation Controller in the namespace                                                                        |
+| 20-controller-connection-secret.yml | vmexamples | Creates a secret with a token to connect to the Automation Controller.<br>Token and controller URL must be added before running. |
+| 30-aap-project.yml                  | vmexamples | Creates a project pointing to this repo                                                                                          |
+| 40-job-templates.yml                | vmexamples | Creates job templates for the playbooks in `ansible/`                                                                            |
 
 The `ansible/` folder contains two simple playbooks to create and delete a virtual machine.
 
