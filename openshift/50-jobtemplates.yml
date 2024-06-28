@@ -10,6 +10,7 @@ spec:
   job_template_project: OCPvirt-Automation
   job_template_playbook: ansible/create-vm.yml
   job_template_inventory: Demo Inventory
+  credentials: ocp-credential
 ---
 apiVersion: tower.ansible.com/v1alpha1
 kind: JobTemplate
@@ -22,3 +23,4 @@ spec:
   job_template_project: OCPvirt-Automation
   job_template_playbook: ansible/delete-vm.yml
   job_template_inventory: Demo Inventory
+  credentials: ocp-credential

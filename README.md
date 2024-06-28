@@ -14,7 +14,8 @@ The resources needs to be created in a particular order, ie. the Ansible Control
 | 10-automation-controller.yml        | aap        | Deploys an Ansible Automation Controller in the namespace                                                                        |
 | 20-controller-connection-secret.yml | vmexamples | Creates a secret with a token to connect to the Automation Controller.<br>Token and controller URL must be added before running. |
 | 30-aap-project.yml                  | vmexamples | Creates a project pointing to this repo                                                                                          |
-| 40-job-templates.yml                | vmexamples | Creates job templates for the playbooks in `ansible/`                                                                            |
+| 40-sa-credentials.yml               | vmexamples | Setup a service account and add it as credentials in AAP                                                                            |
+| 50-job-templates.yml                | vmexamples | Creates job templates for the playbooks in `ansible/`                                                                            |
 
 The `ansible/` folder contains two simple playbooks to create and delete a virtual machine.
 
