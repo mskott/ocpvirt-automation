@@ -1,3 +1,4 @@
 ---
 collections:
   - name: kubevirt.core
+  - name: sabre1041.eda
