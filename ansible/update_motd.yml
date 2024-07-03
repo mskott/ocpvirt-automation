@@ -4,4 +4,4 @@
   tasks:
     - name: debug
       debug:
-        var: ansible_eda.events.m_0.resource.name
+        var: ansible_eda.events.m_0.resource.metadata.name
