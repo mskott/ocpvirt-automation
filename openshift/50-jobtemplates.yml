@@ -32,7 +32,7 @@ metadata:
   namespace: vmexamples
 spec:
   connection_secret: controller-access
-  name: modify_motd
+  name: modify-motd
   project: OCPvirt-Automation
   playbook: ansible/update_motd.yml
   inventory: Demo Inventory
