@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: {{ vm_name }}
   tasks:
     - name: debug
       debug:
