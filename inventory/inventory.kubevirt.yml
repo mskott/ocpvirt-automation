@@ -1,0 +1,6 @@
+---
+plugin: kubevirt.core.kubevirt
+connections:
+- namespaces:
+  - vmexamples
+  create_groups: true
