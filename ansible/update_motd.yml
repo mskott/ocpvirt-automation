@@ -1,5 +1,5 @@
 ---
-- hosts: {{ vm_name }}
+- hosts: "{{ vm_name }}"
   tasks:
     - name: debug
       debug:
