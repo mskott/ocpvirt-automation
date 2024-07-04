@@ -39,8 +39,8 @@
         domain:
           devices:
             interfaces:
-              - masquerade: {}
-                name: default
+            - masquerade: {}
+              name: default
         volumes:
           - dataVolume:
               name: testdv
