@@ -4,15 +4,15 @@
   sources:
   - sabre1041.eda.k8s:
       api_version: kubevirt.io/v1
-      kind: VirtualMachineInstance
+      kind: VirtualMachine
       namespace: vmexamples
 
   rules:
     - name: Run Job on VM start
       condition:
         all:
-        - event.type == 'MODIFIED'
-#        - event.resource.status.ready == "True"
+#        - event.type == 'MODIFIED'
+        - event.resource.status.ready == "True"
       action:
         run_job_template:
           name: modify_motd
