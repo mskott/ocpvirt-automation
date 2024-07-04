@@ -41,6 +41,9 @@
             interfaces:
             - masquerade: {}
               name: default
+        networks:
+        - name: default
+          pod: {}
         volumes:
           - dataVolume:
               name: testdv
