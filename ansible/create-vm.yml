@@ -21,8 +21,26 @@
             storage:
               resources: {}
       spec:
+        template:
+          spec:
+            accessCredentials:
+              - sshPublicKey:
+                  propagationMethod:
+                    noCloud: {}
+                  source:
+                    secret:
+                      secretName: 'authorized-keys'
+            readinessProbe:
+              initialDelaySeconds: 120
+              periodSeconds: 20
+              tcpSocket:
+                port: 22
+              timeoutSeconds: 10
         domain:
-          devices: {}
+          devices:
+            interfaces:
+              - masquerade: {}
+                name: default
         volumes:
           - dataVolume:
               name: testdv
@@ -30,7 +48,7 @@
           - cloudInitNoCloud:
               userData: |-
                 #cloud-config
-                # The default username is: fedora
-                ssh_authorized_keys:
-                  - ssh-ed25519 AAAA...
+                user: fedora
+                password: redhat123!
+                chpasswd: { expire: False }
             name: cloudinit
