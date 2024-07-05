@@ -1,6 +1,10 @@
 ---
 - hosts: "{{ vm_name }}"
   tasks:
-    - name: debug
-      debug:
-        var: ansible_eda.events.m_0.resource.metadata.name
+    - name: Write motd
+      template:
+        src: motd.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: '644'
