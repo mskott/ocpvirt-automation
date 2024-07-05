@@ -21,21 +21,19 @@
             storage:
               resources: {}
       spec:
-        template:
-          spec:
-            accessCredentials:
-              - sshPublicKey:
-                  propagationMethod:
-                    noCloud: {}
-                  source:
-                    secret:
-                      secretName: 'authorized-keys'
-            readinessProbe:
-              initialDelaySeconds: 120
-              periodSeconds: 20
-              tcpSocket:
-                port: 22
-              timeoutSeconds: 10
+        accessCredentials:
+          - sshPublicKey:
+              propagationMethod:
+                noCloud: {}
+              source:
+                secret:
+                  secretName: 'authorized-keys'
+        readinessProbe:
+          initialDelaySeconds: 120
+          periodSeconds: 20
+          tcpSocket:
+            port: 22
+          timeoutSeconds: 10
         domain:
           devices:
             interfaces:
