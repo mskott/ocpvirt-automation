@@ -1,5 +1,6 @@
 ---
 - hosts: "{{ vm_name }}"
+  become: true
   tasks:
     - name: Write motd
       template:
