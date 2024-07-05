@@ -28,11 +28,11 @@ spec:
 apiVersion: tower.ansible.com/v1alpha1
 kind: JobTemplate
 metadata:
-  name: modify_motd
+  name: modify-motd
   namespace: vmexamples
 spec:
   connection_secret: controller-access
-  name: modify-motd
+  name: modify_motd
   project: OCPvirt-Automation
   playbook: ansible/update_motd.yml
   inventory: Demo Inventory
