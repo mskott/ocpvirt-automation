@@ -10,9 +10,9 @@
   rules:
     - name: Run Job on VM start
       condition:
-        all:
+#        all:
 #        - event.type == 'MODIFIED'
-        - event.resource.spec.running == true
+        event.resource.spec.running == true
       action:
         run_job_template:
           name: modify_motd
