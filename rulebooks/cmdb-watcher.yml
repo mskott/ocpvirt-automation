@@ -1,0 +1,14 @@
+- name: Listen for changes to the CMDB
+  hosts: all
+
+  sources:
+    - ansible.eda.webhook:
+        port: 5000
+
+  rules:
+    - name: Say hello
+      condition: event.payload.message == "snapshot"
+      action:
+        run_job_template:
+          name: vm-take-snapshot
+          organization: Default
