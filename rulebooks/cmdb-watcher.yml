@@ -13,3 +13,9 @@
         run_job_template:
           name: vm-take-snapshot
           organization: Default
+
+    - name: Reconcile CI with CMDB
+      condition: event.payload.type == "cmdb-changed"
+      action:
+        run_job_template:
+         name: reconcile-configuration-item
