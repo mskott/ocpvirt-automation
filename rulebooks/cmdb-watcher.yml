@@ -6,8 +6,8 @@
         port: 5000
 
   rules:
-    - name: Say hello
-      condition: event.payload.message == "snapshot"
+    - name: Snapshot VM
+      condition: event.payload.type == "snapshot"
       action:
         run_job_template:
           name: vm-take-snapshot

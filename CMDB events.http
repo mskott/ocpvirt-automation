@@ -1,0 +1,10 @@
+# Create a snapshot of a VM
+POST https://aap25-aap.apps.cluster-ntzff.dynamic.redhatworkshops.io/eda-event-streams/api/eda/v1/external_event_stream/137f0f83-4a56-471a-a03c-1b5539e62914/post/
+Content-Type: application/json
+Authorization: RedHat123
+
+{
+    "type":"snapshot",
+    "vm_name": "testvm",
+    "vm_namespace": "default"
+}
