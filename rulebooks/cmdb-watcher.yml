@@ -2,7 +2,8 @@
   hosts: all
 
   sources:
-    - ansible.eda.webhook:
+    - name: cmdb_webhook
+      ansible.eda.webhook:
         port: 5000
 
   rules:
